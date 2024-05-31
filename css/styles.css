@@ -1,175 +1,6 @@
-/* Nice Select CSS */
-.nice-select {
-  -webkit-tap-highlight-color: transparent;
-  background-color: #f8f8f8;
-  border-radius: 50px;
-  border: solid 1px transparent;
-  box-sizing: border-box;
-  clear: both;
-  cursor: pointer;
-  display: block;
-  float: left;
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: normal;
-  height: 42px;
-  line-height: 40px;
-  outline: none;
-  padding-left: 30px;
-  padding-right: 30px;
-  position: relative;
-  text-align: left !important;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  white-space: nowrap;
-  width: 200px;
-}
-.nice-select:hover {
-  border-color: #dbdbdb;
-}
-.nice-select:active,
-.nice-select.open,
-.nice-select:focus {
-  border-color: #999;
-}
-.nice-select:after {
-  border-bottom: 2px solid #363636;
-  border-right: 2px solid #363636;
-  content: "";
-  display: block;
-  height: 5px;
-  margin-top: -4px;
-  pointer-events: none;
-  position: absolute;
-  right: 30px;
-  top: 50%;
-  -webkit-transform-origin: 66% 66%;
-  -ms-transform-origin: 66% 66%;
-  transform-origin: 66% 66%;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  -webkit-transition: all 0.15s ease-in-out;
-  transition: all 0.15s ease-in-out;
-  width: 5px;
-}
-.nice-select.open:after {
-  -webkit-transform: rotate(-135deg);
-  -ms-transform: rotate(-135deg);
-  transform: rotate(-135deg);
-}
-.nice-select.open .list {
-  top: auto !important;
-  bottom: 100%;
-  opacity: 1;
-  pointer-events: auto;
-  -webkit-transform: scale(1) translateY(0);
-  -ms-transform: scale(1) translateY(0);
-  transform: scale(1) translateY(0);
-}
-.nice-select.disabled {
-  border-color: #ededed;
-  color: #999;
-  pointer-events: none;
-}
-.nice-select.disabled:after {
-  border-color: #cccccc;
-}
-.nice-select.wide {
-  width: 100%;
-}
-.nice-select.wide .list {
-  left: 0 !important;
-  right: 0 !important;
-}
-.nice-select.right {
-  float: right;
-}
-.nice-select.right .list {
-  left: auto;
-  right: 0;
-}
-.nice-select.small {
-  font-size: 18px;
-  height: 50px;
-  line-height: 34px;
-}
-.nice-select.small:after {
-  height: 4px;
-  width: 4px;
-}
-.nice-select.small .option {
-  line-height: 34px;
-  min-height: 34px;
-}
-.nice-select .list {
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
-  box-sizing: border-box;
-  margin-top: 4px;
-  opacity: 0;
-  overflow: hidden;
-  padding: 0;
-  pointer-events: none;
-  position: absolute;
-  bottom: 100%;
-  left: 0;
-  -webkit-transform-origin: 50% 0;
-  -ms-transform-origin: 50% 0;
-  transform-origin: 50% 0;
-  -webkit-transform: scale(0.75) translateY(-21px);
-  -ms-transform: scale(0.75) translateY(-21px);
-  transform: scale(0.75) translateY(-21px);
-  -webkit-transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25),
-    opacity 0.15s ease-out;
-  transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
-  z-index: 9;
-  width: 200px;
-}
-.nice-select .list:hover .option:not(:hover) {
-  background-color: transparent !important;
-}
-.nice-select .option {
-  cursor: pointer;
-  font-weight: 400;
-  line-height: 40px;
-  list-style: none;
-  min-height: 40px;
-  outline: none;
-  padding-left: 30px;
-  padding-right: 29px;
-  text-align: left;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
-.nice-select .option:hover,
-.nice-select .option.focus,
-.nice-select .option.selected.focus {
-  background-color: #f6f6f6;
-}
-.nice-select .option.selected {
-  font-weight: bold;
-}
-.nice-select .option.disabled {
-  background-color: transparent;
-  color: #999;
-  cursor: default;
-}
-
-.no-csspointerevents .nice-select .list {
-  display: none;
-}
-
-.no-csspointerevents .nice-select.open .list {
-  display: block;
-}
 
 /* CSS Global Rules */
+
 * {
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
@@ -177,6 +8,83 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth !important;
+}
+#tuto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.center {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.stylish_headingg {
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+
+.stylish_headingg::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: #27ae60;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+/* General Styles */
+.iframe-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px; /* Increased maximum width */
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border: 5px solid #27ae60;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none; /* Remove iframe's default border */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .stylish_heading {
+    font-size: 1.5em;
+  }
+
+  .iframe-container {
+    max-width: 640px; /* Increased maximum width */
+  }
+}
+
+@media (max-width: 480px) {
+  .iframe-container {
+    max-width: 400px; /* Increased maximum width */
+  }
 }
 
 html {
@@ -255,7 +163,7 @@ section {
 .preloader .loader {
   height: 2.5rem;
   width: 2.5rem;
-  border: 0.25rem solid #27AE60;
+  border: 0.25rem solid #27ae60;
   border-radius: 50%;
   border-top: 0.25rem solid transparent;
   border-bottom: 0.25rem solid transparent;
@@ -316,7 +224,7 @@ section {
 }
 
 .red_dot {
-  background: linear-gradient(to bottom, #2ECC71 10%, #27AE60 100%);
+  background: linear-gradient(to bottom, #2ecc71 10%, #27ae60 100%);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -341,10 +249,22 @@ section {
 
 /* Header Section Styling */
 #home {
-  background: #2ECC71; /* Green color */
-  background: -moz-linear-gradient(top, #2ECC71 37%, #27AE60 98%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #2ECC71 37%, #27AE60 98%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #2ECC71 37%, #27AE60 98%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: #2ecc71; /* Green color */
+  background: -moz-linear-gradient(
+    top,
+    #2ecc71 37%,
+    #27ae60 98%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    #2ecc71 37%,
+    #27ae60 98%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #2ecc71 37%,
+    #27ae60 98%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2ECC71', endColorstr='#27AE60',GradientType=0 ); /* IE6-9 */
   background-repeat: no-repeat;
   color: #ffffff;
@@ -353,7 +273,6 @@ section {
   padding: 50px;
   position: relative;
 }
-
 
 /* Hero Section Styling */
 
@@ -375,7 +294,7 @@ section {
 }
 
 .download-btn {
-  background: linear-gradient(to bottom, #2ECC71 10%, #138808  100%);
+  background: linear-gradient(to bottom, #2ecc71 10%, #138808 100%);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -390,7 +309,6 @@ section {
   top: 5%; /* Adjust the position from the top */
   /* margin-top: 1dp; Remove this line */
 }
-
 
 /* Custom Shape Divider */
 
@@ -421,46 +339,8 @@ section {
   fill: #ffffff;
 }
 
-#scrollUp {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background: #d90647; /* Old browsers */
-  background: -moz-linear-gradient(
-    top,
-    #d90647 37%,
-    #eb402c 98%
-  ); /* FF3.6-15 */
-  background: -webkit-linear-gradient(
-    top,
-    #d90647 37%,
-    #eb402c 98%
-  ); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(
-    to bottom,
-    #d90647 37%,
-    #eb402c 98%
-  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d90647', endColorstr='#eb402c',GradientType=0 ); /* IE6-9 */
-  background-repeat: no-repeat;
-  color: #ffffff; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  width: 50px;
-  height: 50px;
-  border-radius: 50%; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
-  box-shadow: 0 10px 30px rgba(54, 54, 54, 0.3);
-}
 
-#scrollUp:hover {
-  background-color: #555; /* Add a dark-grey background on hover */
-  transform: scale(1.1);
-  transition: 0.3s;
-}
+
 
 /* End: Header Section Styling */
 
@@ -480,16 +360,14 @@ section {
 }
 /* End: Features Section Styling */
 
-
-
 /* Download The App Section Styling */
 #download {
   text-align: center;
-  padding: 90px;
+  padding: 60px;
 }
 
 #download * {
-  margin: 25px auto;
+  margin: 15px auto;
 }
 
 .app-logo {
@@ -499,7 +377,6 @@ section {
 }
 
 /* End: Download The App Section Styling */
-
 
 /* End: Main CSS Rules */
 
@@ -521,6 +398,7 @@ section {
   }
 
   .btn {
+    margin-top: 10px;
     padding: 10px 20px;
     font-size: 16px;
   }
@@ -647,16 +525,6 @@ section {
     width: 100% !important;
     margin: 0 auto;
     margin-top: 50px;
-  }
-
-  .subscribe-form {
-    margin-top: 2rem;
-  }
-
-  .subscribe-btn {
-    position: static;
-    margin-left: 0;
-    margin-top: 20px;
   }
 
   #footer {
@@ -899,6 +767,7 @@ section {
   }
 
   .btn {
+    margin-top: 10px;
     padding: 10px 20px;
     font-size: 16px;
   }
@@ -907,8 +776,10 @@ section {
     padding: 20px;
   }
   .btn {
+    margin-top: 5px;
     padding: 15px 30px;
   }
+  
   #mobileNav {
     display: block;
     right: 5%;
@@ -983,17 +854,6 @@ section {
     margin-top: 50px;
   }
 
-  .subscribe-form {
-    margin-top: 2rem;
-  }
-
-  .subscribe-btn {
-    margin-left: -100px;
-    position: absolute;
-  }
-  #subscribe {
-    padding: 100px;
-  }
 
   .form-input {
     width: 60%;
